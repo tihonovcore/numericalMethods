@@ -1,4 +1,6 @@
-import Agent.*
+package utils
+
+import utils.Agent.*
 import kotlin.math.*
 
 enum class Agent(

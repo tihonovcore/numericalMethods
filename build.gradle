@@ -12,10 +12,17 @@ repositories {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     compile group: 'org.ejml', name: 'ejml-all', version: '0.39'
+    compile group: 'org.apache.commons', name: 'commons-csv', version: '1.4'
+    compile group: 'commons-io', name: 'commons-io', version: '2.6'
 }
 
 task Aluminum(type: JavaExec) {
-    main = "MainKt"
+    main = "aluminum.MainKt"
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+task Algan(type: JavaExec) {
+    main = "algan.AlganProcessorMainKt"
     classpath = sourceSets.main.runtimeClasspath
 }
 
